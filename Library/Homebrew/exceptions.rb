@@ -245,3 +245,11 @@ class ChecksumMismatchError < RuntimeError
     super + advice.to_s
   end
 end
+
+class GPGNotInstalled < RuntimeError; end
+
+class GPGKeyNotFound < RuntimeError; end
+
+class GPGKeyInvalidFingerprint < RuntimeError; end
+
+class GPGKeyInvalidSignature < RuntimeError; end
